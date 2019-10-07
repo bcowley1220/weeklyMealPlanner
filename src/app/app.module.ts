@@ -1,16 +1,36 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { BrowserModule } from "@angular/platform-browser";
+import { NgModule } from "@angular/core";
+import { AppComponent } from "./app.component";
+import { MainViewComponent } from "./meal-view/main-view/main-view.component";
+import { HeaderComponent } from "./meal-view/header/header.component";
+import { MealViewComponent } from "./meal-view/meal-view.component";
+import { NavBarComponent } from "./meal-view/nav-bar/nav-bar.component";
+import { RouterModule, Routes } from "@angular/router";
+// import { HttpClientModule } from "@angular/common/http";
+import { PlanningFormComponent } from "./meal-view/main-view/planning-form/planning-form.component";
+import { ReactiveFormsModule } from "@angular/forms";
 
-import { AppComponent } from './app.component';
-
+let appRoutes: Routes = [
+  { path: "planning-form", component: PlanningFormComponent },
+  // { path: "results", component: ResultsComponent },
+  // { path: "scores", component: ScoresComponent },
+  { path: "", redirectTo: "/quiz", pathMatch: "full" }
+];
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MainViewComponent,
+    HeaderComponent,
+    MealViewComponent,
+    NavBarComponent,
+    PlanningFormComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(appRoutes),
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

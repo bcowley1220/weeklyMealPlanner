@@ -1,0 +1,20 @@
+meal-view {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 10% 80% 10%;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "h"
+    "m"
+    "n";
+}
+/* header {
+  grid-area: header;
+}
+main-view {
+  grid-area: main;
+}
+nav-bar {
+  grid-area: nav;
+} */

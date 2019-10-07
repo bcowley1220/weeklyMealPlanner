@@ -1,0 +1,16 @@
+header {
+  grid-area: h;
+  border: solid 1px black;
+}
+main-view {
+  grid-area: m;
+  border: solid 1px black;
+}
+nav-bar {
+  grid-area: n;
+  border: solid 1px black;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  text-align: center;
+}
