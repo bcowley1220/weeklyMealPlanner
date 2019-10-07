@@ -8,7 +8,8 @@ import { FormControl } from "@angular/forms";
 })
 export class PlanningFormComponent implements OnInit {
   constructor() {}
+  // todayDate = new FormControl("");
+  todayDate = new Date();
 
-  todayDate = new FormControl("");
   ngOnInit() {}
 }

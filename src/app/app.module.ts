@@ -8,13 +8,13 @@ import { NavBarComponent } from "./meal-view/nav-bar/nav-bar.component";
 import { RouterModule, Routes } from "@angular/router";
 // import { HttpClientModule } from "@angular/common/http";
 import { PlanningFormComponent } from "./meal-view/main-view/planning-form/planning-form.component";
-import { ReactiveFormsModule } from "@angular/forms";
+import { ReactiveFormsModule, FormsModule } from "@angular/forms";
 
 let appRoutes: Routes = [
-  { path: "planning-form", component: PlanningFormComponent },
+  { path: "planning-form", component: PlanningFormComponent }
   // { path: "results", component: ResultsComponent },
   // { path: "scores", component: ScoresComponent },
-  { path: "", redirectTo: "/quiz", pathMatch: "full" }
+  // { path: "", redirectTo: "planning-form", pathMatch: "full" }
 ];
 @NgModule({
   declarations: [
@@ -28,7 +28,8 @@ let appRoutes: Routes = [
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

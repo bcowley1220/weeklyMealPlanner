@@ -1,5 +1,35 @@
-<h2>Let's Plan Our Meals</h2>
-<form>
-  <label for="todayDate">Today's Date:</label>
-  <input type="date" name="todayDate" id="" />
-</form>
+<div id="formWrapper">
+  <h2>Let's Plan Your Week's Meals</h2>
+  <form id="planningForm">
+    <div class="flexC">
+      <label for="amountOfPeople">How Many People Are You Feeding? </label>
+      <input
+        type="number"
+        name="amountOfPeople"
+        id=""
+        [formControl]="amountOfPeople"
+        class="formInput"
+      />
+    </div>
+    <div class="flexC">
+      <label for="howManyMealsPerDay"> How Many Meals Per Day? </label>
+      <input type="number" name="howManyMealsPerDay" id="" class="formInput" />
+    </div>
+    <div class="flexC" id="radioBtns">
+      <label class="radioDiv">Any Dietary Needs?</label>
+      <div class="radioDiv">
+        <input type="radio" name="low-carb" id="" />
+        <label for="low-carb">Low Card?</label>
+      </div>
+      <div class="">
+        <input type="radio" name="low-fat" id="" />
+        <label for="low-fat">Low Fat?</label>
+      </div>
+      <div class="radioDiv">
+        <label for="high-protein">High Protein?</label>
+        <input type="radio" name="high-protein" id="" />
+      </div>
+    </div>
+    <button class="formButton">Submit</button>
+  </form>
+</div>

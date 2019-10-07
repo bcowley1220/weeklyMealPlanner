@@ -8,3 +8,11 @@ body {
   height: 100%;
   width: 100%;
 }
+
+.flexC {
+  display: flex;
+  flex-direction: column;
+}
+.flexR {
+  display: flex;
+}
