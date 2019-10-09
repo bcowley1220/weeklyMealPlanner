@@ -1,35 +1,53 @@
 <div id="formWrapper">
   <h2>Let's Plan Your Week's Meals</h2>
-  <form id="planningForm">
+  <form
+    id="planningForm"
+    [formGroup]="planningForm"
+    (ngSubmit)="onPlanningFormSubmit()"
+  >
     <div class="flexC">
       <label for="amountOfPeople">How Many People Are You Feeding? </label>
       <input
         type="number"
         name="amountOfPeople"
         id=""
-        [formControl]="amountOfPeople"
         class="formInput"
+        formControlName="amountOfPeople"
       />
     </div>
     <div class="flexC">
       <label for="howManyMealsPerDay"> How Many Meals Per Day? </label>
-      <input type="number" name="howManyMealsPerDay" id="" class="formInput" />
+      <input
+        type="number"
+        name="howManyMealsPerDay"
+        id=""
+        class="formInput"
+        formControlName="howManyMealsPerDay"
+      />
     </div>
-    <div class="flexC" id="radioBtns">
+
+    <!-- <div class="flexC" id="radioBtns">
       <label class="radioDiv">Any Dietary Needs?</label>
       <div class="radioDiv">
-        <input type="radio" name="low-carb" id="" />
-        <label for="low-carb">Low Card?</label>
+        <input type="radio" name="lowCarb" id="" formControlName="lowCarb" />
+        <label for="low-carb">Low Carb?</label>
       </div>
       <div class="">
-        <input type="radio" name="low-fat" id="" />
+        <input type="radio" name="lowFat" id="" formControlName="lowFat" />
         <label for="low-fat">Low Fat?</label>
       </div>
       <div class="radioDiv">
-        <label for="high-protein">High Protein?</label>
-        <input type="radio" name="high-protein" id="" />
-      </div>
-    </div>
-    <button class="formButton">Submit</button>
+        <label for="highProtein">High Protein?</label>
+        <input
+          type="radio"
+          name="highProtein"
+          id=""
+          formControlName="highProtein"
+        />
+      </div> -->
+    <!-- </div> -->
+    <button type="submit" class="formSubmit">
+      Submit
+    </button>
   </form>
 </div>
