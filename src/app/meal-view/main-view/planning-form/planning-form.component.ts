@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { FormControl } from "@angular/forms";
+import { FormControl, FormGroup } from "@angular/forms";
 
 @Component({
   selector: "planning-form",
@@ -9,7 +9,16 @@ import { FormControl } from "@angular/forms";
 export class PlanningFormComponent implements OnInit {
   constructor() {}
   // todayDate = new FormControl("");
-  todayDate = new Date();
-
+  planningForm = new FormGroup({
+    amountOfPeople: new FormControl(""),
+    howManyMealsPerDay: new FormControl("")
+    // lowCarb: new FormControl(""),
+    // lowFat: new FormControl(""),
+    // highProtein: new FormControl("")
+  });
   ngOnInit() {}
+
+  onPlanningFormSubmit() {
+    return this.planningForm.value;
+  }
 }
